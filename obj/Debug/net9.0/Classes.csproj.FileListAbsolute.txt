@@ -1,0 +1,14 @@
+/Users/mtelli/Documents/PP/CSharpintro/Classes/bin/Debug/net9.0/Classes
+/Users/mtelli/Documents/PP/CSharpintro/Classes/bin/Debug/net9.0/Classes.deps.json
+/Users/mtelli/Documents/PP/CSharpintro/Classes/bin/Debug/net9.0/Classes.runtimeconfig.json
+/Users/mtelli/Documents/PP/CSharpintro/Classes/bin/Debug/net9.0/Classes.dll
+/Users/mtelli/Documents/PP/CSharpintro/Classes/bin/Debug/net9.0/Classes.pdb
+/Users/mtelli/Documents/PP/CSharpintro/Classes/obj/Debug/net9.0/Classes.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mtelli/Documents/PP/CSharpintro/Classes/obj/Debug/net9.0/Classes.AssemblyInfoInputs.cache
+/Users/mtelli/Documents/PP/CSharpintro/Classes/obj/Debug/net9.0/Classes.AssemblyInfo.cs
+/Users/mtelli/Documents/PP/CSharpintro/Classes/obj/Debug/net9.0/Classes.csproj.CoreCompileInputs.cache
+/Users/mtelli/Documents/PP/CSharpintro/Classes/obj/Debug/net9.0/Classes.dll
+/Users/mtelli/Documents/PP/CSharpintro/Classes/obj/Debug/net9.0/refint/Classes.dll
+/Users/mtelli/Documents/PP/CSharpintro/Classes/obj/Debug/net9.0/Classes.pdb
+/Users/mtelli/Documents/PP/CSharpintro/Classes/obj/Debug/net9.0/Classes.genruntimeconfig.cache
+/Users/mtelli/Documents/PP/CSharpintro/Classes/obj/Debug/net9.0/ref/Classes.dll
