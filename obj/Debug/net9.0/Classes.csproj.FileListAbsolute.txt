@@ -12,3 +12,4 @@
 /Users/mtelli/Documents/PP/CSharpintro/Classes/obj/Debug/net9.0/Classes.pdb
 /Users/mtelli/Documents/PP/CSharpintro/Classes/obj/Debug/net9.0/Classes.genruntimeconfig.cache
 /Users/mtelli/Documents/PP/CSharpintro/Classes/obj/Debug/net9.0/ref/Classes.dll
+/Users/mtelli/Documents/PP/CSharpintro/Classes/obj/Debug/net9.0/Classes.sourcelink.json
