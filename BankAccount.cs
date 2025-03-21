@@ -20,12 +20,19 @@ public class BankAccount
       } 
     }
 
-    public BankAccount(string name, decimal initialBalance)
+    private readonly decimal _minimumBalance;
+    public BankAccount(string name, decimal initialBalance) : this(name, initialBalance, 0) { }
+    public BankAccount(string name, decimal initialBalance, decimal minimumBalance)
     {
-      this.Number = s_accountNumberSeed.ToString();
-      this.Owner = name;
-      MakeDeposit(initialBalance, DateTime.Now, "Initial balance");
+      Number = s_accountNumberSeed.ToString();
       s_accountNumberSeed++;
+
+      Owner = name;
+      _minimumBalance = minimumBalance;
+      if (initialBalance > 0)
+      {
+          MakeDeposit(initialBalance, DateTime.Now, "Initial balance");
+      }
     }
     private List<Transaction> _allTransactions = new List<Transaction>();
     public void MakeDeposit(decimal amount, DateTime date, string note)
@@ -42,14 +49,25 @@ public class BankAccount
     {
       if (amount <= 0)
       {
-        throw new ArgumentOutOfRangeException(nameof(amount), "Amount of deposit must be positive");
+          throw new ArgumentOutOfRangeException(nameof(amount), "Amount of withdrawal must be positive");
       }
-      if (Balance - amount < 0)
-      {
-        throw new InvalidOperationException("Not sufficient fund for this withdrawal");
-      }
-      var withdrawal = new Transaction(-amount, date, note);
+      Transaction? overdraftTransaction = CheckWithdrawalLimit(Balance - amount < _minimumBalance);
+      Transaction? withdrawal = new(-amount, date, note);
       _allTransactions.Add(withdrawal);
+      if (overdraftTransaction != null)
+          _allTransactions.Add(overdraftTransaction);
+    }
+
+    protected virtual Transaction? CheckWithdrawalLimit(bool isOverdrawn)
+    {
+      if (isOverdrawn)
+      {
+          throw new InvalidOperationException("Not sufficient funds for this withdrawal");
+      }
+      else
+      {
+          return default;
+      }
     }
 
     public string GetAccountHistory(){
